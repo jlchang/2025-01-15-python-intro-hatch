@@ -28,7 +28,7 @@ life_cycle: 'beta'
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'FIXME'
+source: 'https://github.com/jlchang/2024-10-XX-python-intro-hatch'
 
 # Default branch of your lesson
 branch: 'main'
@@ -98,6 +98,6 @@ profiles:
 # sandpaper and varnish versions) should live
 
 
-url: FIXME 
+url: https://jlchang.github.io/2024-10-XX-python-intro-hatch/ 
 analytics: carpentries
 lang: en
