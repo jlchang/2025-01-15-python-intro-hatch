@@ -3,10 +3,9 @@ title: "Contributor Code of Conduct"
 ---
 
 As contributors and maintainers of this project,
-we pledge to follow the [Broad’s Standards of Conduct][soc].
+we pledge to follow the [Watertown Free Public Library's Code of Conduct][coc].
 
 Instances of abusive, harassing, or otherwise unacceptable behavior
-may be reported by following Broad [reporting guidelines][soc-reporting].
+may be reported to library staff on duty. 
 
-[soc-reporting]: https://intranet.broadinstitute.org/administration/reporting-ethics-compliance-or-policy-violation-including-harassment-and
-[soc]: https://intranet.broadinstitute.org/node/851
+[coc]: https://www.watertownlib.org/192/Code-of-Conduct
