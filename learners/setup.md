@@ -38,8 +38,7 @@ You should see a `lc-python` folder in "My Drive", with a subfolder called `data
 ![](fig/success.png){alt='the ▶️ symbol'}
 You've successfully loaded data if you see a dataframe appear beneath the code cell.
 
-If you need help with setup, we'll have office hours on Fri. Sept. 20 from 12:00 - 1:00pm in Tahiti Conference Room, 105B Room #301 and on Fri. Sept. 27 from 1:00 - 2:00pm in Madagascar Conference Room,  105B, Room #504.
-
+If you need help with setup, we'll have office hours an hour before the first session (FIXME: date/time TBD)
 
 :::::::::::::::::::::::::::::::::::::::::: spoiler
 
