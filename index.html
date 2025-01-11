@@ -418,42 +418,8 @@ simulated data. In order to do this, we will use Google drive. Because
 we will need to grant Colab access to our Google Drive data, <strong>we
 strongly recommend creating an ad-hoc (“throwaway”) Gmail
 account.</strong> That way, we do not risk sharing or altering any
-sensitive data that we might have on our Broad Institute Google
-accounts.</p>
-<div class="section level2">
-<h2 id="obtain-lesson-materials">Obtain lesson materials<a class="anchor" aria-label="anchor" href="#obtain-lesson-materials"></a></h2>
-<ol style="list-style-type: decimal"><li>Download <a href="files/data.zip">this zip file</a> and save it to
-your Desktop.</li>
-<li>Unzip the <code>data.zip</code> file, which should create a new
-folder called <code>data</code>.</li>
-<li>Create a new folder in your home directory called
-<code>lc-python</code> and put the <code>data</code> folder in this
-folder.</li>
-<li>Log into <a href="https://drive.google.com/drive/my-drive" class="external-link">Google
-Drive</a> using the Gmail account you created for this course. You may
-want to use a private browsing window to do this if you usually use your
-Broad account when logging in to Drive.</li>
-<li>Upload the lesson content by clicking “+ New” followed by “Folder
-upload.” Select and upload the <code>lc-python</code> folder you just
-created.</li>
-</ol><p>You should see a <code>lc-python</code> folder in “My Drive”, with a
-subfolder called <code>data</code>.</p>
-</div>
-<div class="section level2">
-<h2 id="run-the-access-test">Run the access test<a class="anchor" aria-label="anchor" href="#run-the-access-test"></a></h2>
-<ol style="list-style-type: decimal"><li><p>Visit <a href="https://broad.io/cb-python-access-test" class="external-link uri">https://broad.io/cb-python-access-test</a><br></p></li>
-<li><p>Click “Copy to Drive” and create your own copy of
-<code>Python_workshop_data_access_test.ipynb</code><br><img src="fig/run_access_test.png" alt="Click Copy to Drive" class="figure"></p></li>
-<li><p>If you see this dialog box, click “Connect to Google Drive” <img src="fig/permit_access.png" alt='Click "Connect to Google Drive"' class="figure"></p></li>
-<li><p>Authorize access for the google account you’re using for this
-workshop. There will be several prompts to grant access. <img src="fig/authorize_access.png" alt="Authorize access to your google account" class="figure"></p></li>
-<li><p>Once access has been granted, go back to the access test
-notebook, click the ▶️ symbol on the left hand side of the first code
-cell.</p></li>
-</ol><p><img src="fig/success.png" alt="the ▶️ symbol" class="figure"> You’ve successfully
-loaded data if you see a dataframe appear beneath the code cell.</p>
-<p>If you need help with setup, we’ll have office hours an hour before
-the first session (FIXME: date/time TBD)</p>
+sensitive data that we might have in the Google accounts we regularly
+use.</p>
 <div id="accordionSpoiler7" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler7" aria-expanded="false" aria-controls="collapseSpoiler7">
@@ -462,7 +428,7 @@ the first session (FIXME: date/time TBD)</p>
   Further reading: colab alternatives
   </h3>
 </button>
-<div id="collapseSpoiler7" class="accordion-collapse collapse" aria-labelledby="headingSpoiler7" data-bs-parent="#accordionSpoiler7">
+<div id="collapseSpoiler7" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler7" aria-labelledby="headingSpoiler7">
 <div class="accordion-body">
 <p>We chose Google colab to ensure Python setup and everyone’s Jupyter
 interface would be consistent. For your personal use, you may prefer not
@@ -490,7 +456,7 @@ can launch a notebook in two ways:</p>
   Anaconda Navigator
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>Launch Anaconda Navigator. It might ask you if you’d like to send
 anonymized usage information to Anaconda developers: <img src="fig/anaconda-navigator-first-launch.png" alt="Anaconda Navigator first launch" class="figure"> Make your choice and click “Ok,
@@ -515,7 +481,7 @@ selecting “Python 3”: <img src="fig/jupyter-notebook-launch-notebook.png" al
   Command line (Terminal)
   </h3>
 </button>
-<div id="collapseSpoiler6" class="accordion-collapse collapse" aria-labelledby="headingSpoiler6" data-bs-parent="#accordionSpoiler6">
+<div id="collapseSpoiler6" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler6" aria-labelledby="headingSpoiler6">
 <div class="accordion-body">
 <p>1. Navigate to the <code>data</code> directory:</p>
 <div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
@@ -526,7 +492,7 @@ selecting “Python 3”: <img src="fig/jupyter-notebook-launch-notebook.png" al
   Unix shell
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>If you’re using a Unix shell application, such as Terminal app in
 macOS, Console or Terminal in Linux, or <a href="https://gitforwindows.org" class="external-link">Git Bash</a> on Windows, execute the
@@ -548,7 +514,7 @@ following command:</p>
   Command Prompt (Windows)
   </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
 <div class="accordion-body">
 <p>On Windows, you can use its native Command Prompt program. The
 easiest way to start it up is pressing <kbd>Windows Logo
@@ -569,7 +535,7 @@ navigate to the <code>data</code> folder:</p>
   Unix shell
   </h3>
 </button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -588,7 +554,7 @@ navigate to the <code>data</code> folder:</p>
   Command Prompt (Windows)
   </h3>
 </button>
-<div id="collapseSpoiler5" class="accordion-collapse collapse" aria-labelledby="headingSpoiler5" data-bs-parent="#accordionSpoiler5">
+<div id="collapseSpoiler5" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler5" aria-labelledby="headingSpoiler5">
 <div class="accordion-body">
 <pre class="source"><code>python -m notebook</code></pre>
 </div>
@@ -631,7 +597,6 @@ Windows</a>, you have to call Python <em>via</em>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</div>
 </div>
 
 
@@ -684,8 +649,8 @@ any links that you are not going to use.
   "url": "https://jlchang.github.io/2024-10-XX-python-intro-hatch/index.html",
   "identifier": "https://jlchang.github.io/2024-10-XX-python-intro-hatch/index.html",
   "dateCreated": "2024-09-01",
-  "dateModified": "2024-12-10",
-  "datePublished": "2024-12-10"
+  "dateModified": "2025-01-11",
+  "datePublished": "2025-01-11"
 }
 
   </script><script>
