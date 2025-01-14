@@ -32,11 +32,11 @@ You'll find all the links listed below as clickable links in the collaborative d
 
 #### **If you need help**, please put the <span style="color:fuchsia">pink post-it</span> on your computer.
 
-If you've created a gmail account to access colab account, please put the <span style="color:limegreen">green post-it</span> on your computer and feel free to browse today's lesson content. https:/broad.io/cb-python-20240927-lesson
+If you've created a gmail account to access colab account, please put the <span style="color:limegreen">green post-it</span> on your computer.
 
 
 
-Feel free to browse today's lesson content. jlchang.github.io/2025-01-15-python-intro-hatch (or tinyurl.com/wplpythonJan15)
+Feel free to browse today's [lesson content](jlchang.github.io/2025-01-15-python-intro-hatch) [tinyurl.com/wplpythonJan15](tinyurl.com/wplpythonJan15)
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
