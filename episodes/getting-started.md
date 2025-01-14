@@ -25,31 +25,18 @@ exercises: 5
 
 ## Before we begin
 
-### Open the collaborative doc for our workshop https://broad.io/cb-python-20240927  
+### Open the collaborative doc for our workshop https://tinyurl.com/collabdocJan15 
 You'll find all the links listed below as clickable links in the collaborative doc.
 
-If you haven't completed your workshop setup please visit https://broad.io/cb-python-setup
-
-#### **If you need help** with setup, please put the <span style="color:fuchsia">pink post-it</span> on your computer and a TA will come help you.
-
-If you're fully set up (ie created your colab account, downloaded the workshop data files, uploaded the files to your colab account's google drive AND successfully run the access test), please put the <span style="color:limegreen">green post-it</span> on your computer and feel free to browse today's lesson content. https:/broad.io/cb-python-20240927-lesson
 
 
-**To run the access test**  
-1. visit https://broad.io/cb-python-access-test  
-2. click "Copy to Drive" and create your own copy of `Python_workshop_data_access_test.ipynb`  
-  ![](fig/run_access_test.png){alt='Click Copy to Drive'}  
+#### **If you need help**, please put the <span style="color:fuchsia">pink post-it</span> on your computer.
 
-3. If you see this dialog box, click "Connect to Google Drive"
-  ![](fig/permit_access.png){alt='Click "Connect to Google Drive"'}  
+If you've created a gmail account to access colab account, please put the <span style="color:limegreen">green post-it</span> on your computer and feel free to browse today's lesson content. https:/broad.io/cb-python-20240927-lesson
 
-1. Authorize access for the google account you're using for this workshop. There will be several prompts to grant access.
-  ![](fig/authorize_access.png){alt='Authorize access to your google account'}  
-1. Once access has been granted, go back to the access test notebook, click the ▶️ symbol on the left hand side of the first code cell.
-You've successfully loaded data if you see a dataframe appear beneath the code cell
-  ![](fig/success.png){alt='the ▶️ symbol'}
 
-If you see loaded data beneath the code cell, feel free to browse today's lesson content. https:/broad.io/cb-python-20240927-lesson
+
+Feel free to browse today's lesson content. jlchang.github.io/2025-01-15-python-intro-hatch (or tinyurl.com/wplpythonJan15)
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -152,7 +139,7 @@ If you move your cursor back to the first cell, just after the `7 * 3` code, and
 
 ```python
 7 * 3
-2 +1
+2 + 1
 ```
 
 While Python runs both calculations Juypter will only display the output from the last line of code in a specific cell, unless you tell it to do otherwise.
