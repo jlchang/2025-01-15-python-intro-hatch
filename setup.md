@@ -10,7 +10,7 @@ and instructions on how to obtain them are provided below.
 
 To participate in this lesson, we will use [Colab notebooks](https://colab.research.google.com/). Colab is a cloud-based environment where you can run scripting languages such as Python, create small segments of code, annotate them with notes and rich text, and return to your work later.
 
-We will need to import our own resources into Colab, such as our simulated data. In order to do this, we will use Google drive. Because we will need to grant Colab access to our Google Drive data, **we strongly recommend creating an ad-hoc ("throwaway") Gmail account.** That way, we do not risk sharing or altering any sensitive data that we might have in the Google accounts we regularly use.
+We will need to import our own resources into Colab, such as our simulated data. To do this, one option is to use Google drive. Because we would need to grant Colab access to our Google Drive data, **we strongly recommend creating an ad-hoc ("throwaway") Gmail account.** That way, we do not risk sharing or altering any sensitive data that we might have in the Google accounts we regularly use.
 
 :::::::::::::::::::::::::::::::::::::::::: spoiler
 

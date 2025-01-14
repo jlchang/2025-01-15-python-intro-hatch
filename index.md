@@ -19,7 +19,7 @@ This lesson is an introduction to programming in Python requiring little or no p
 1. Learners need to understand what files and directories are and
   what a working directory is.
 
-2. Learners must have a Google account capable of accessing Google Colab. Learners must also download the dataset that will be used in the lesson before the workshop begins.
+2. Learners must have a Google account capable of accessing Google Colab. 
   
   Please see setup instructions below for details.
   
