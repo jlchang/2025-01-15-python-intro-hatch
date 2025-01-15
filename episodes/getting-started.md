@@ -46,7 +46,7 @@ Feel free to browse today's [lesson content](jlchang.github.io/2025-01-15-python
 
 Python is a popular programming language for tasks such as data collection, cleaning, and analysis. Python can help you to create reproducible workflows to accomplish repetitive tasks more efficiently. 
 
-This lesson works with a series of CSV files of circulation data from the Chicago Public Library system to demonstrate how to use Python to clean, analyze, and visualize usage data that spans over the course of multiple years. 
+This lesson works with a series of CSV files to demonstrate how to use Python to clean, analyze, and visualize usage data that spans over the course of multiple years. 
 
 
 ## Use Jupyter Notebook to edit and run Python code.
