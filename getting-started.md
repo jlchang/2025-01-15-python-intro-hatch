@@ -36,7 +36,7 @@ If you've created a gmail account to access colab account, please put the <span 
 
 
 
-Feel free to browse today's [lesson content](jlchang.github.io/2025-01-15-python-intro-hatch) [tinyurl.com/wplpythonJan15](tinyurl.com/wplpythonJan15)
+Feel free to browse today's [lesson content](jlchang.github.io/2025-01-15-python-intro-hatch) [(tinyurl.com/wplpythonJan15)](tinyurl.com/wplpythonJan15)
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
