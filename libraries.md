@@ -159,9 +159,54 @@ Using these common aliases can make it easier to work with existing documentatio
 `Pandas` is a widely-used Python library for statistics using tabular data.
 Essentially, it gives you access to 2-dimensional tables whose columns have names and can have different data types. We can start using pandas by reading a `Comma Separated Values` (CSV) data file with the function `pd.read_csv()`. The function `.read_csv()` expects as an argument the path to and name of the file to be read. This returns a dataframe that you can assign to a variable.
 
-### Find your CSV files
+### Obtain CSV files
 
-From the file browser in the left sidebar you can select the `data` folder to view the contents of the folder. If you downloaded and uncompressed the dataset correctly, you should see a series of CSV files from 2011 to 2022. If you double-click on the first file, `2011_circ.csv`, you will see a preview of the CSV file in a new tab in the main panel of JupyterLab. 
+Run `wget` to download files directly to the cloud where your Colab instance is running:
+
+```bash
+!wget https://github.com/jlchang/cb-python-intro-lesson-template/raw/refs/heads/main/episodes/files/data.zip
+!unzip data.zip
+```
+```output
+--2024-09-25 17:56:34--  https://github.com/jlchang/cb-python-intro-lesson-template/raw/refs/heads/main/episodes/files/data.zip
+Resolving github.com (github.com)... 20.27.177.113
+Connecting to github.com (github.com)|20.27.177.113|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://raw.githubusercontent.com/jlchang/cb-python-intro-lesson-template/refs/heads/main/episodes/files/data.zip [following]
+--2024-09-25 17:56:34--  https://raw.githubusercontent.com/jlchang/cb-python-intro-lesson-template/refs/heads/main/episodes/files/data.zip
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.111.133, 185.199.110.133, 185.199.109.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.111.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 138902 (136K) [application/zip]
+Saving to: ‘data.zip’
+
+data.zip            100%[===================>] 135.65K  --.-KB/s    in 0.09s   
+
+2024-09-25 17:56:35 (1.54 MB/s) - ‘data.zip’ saved [138902/138902]
+
+Archive:  data.zip
+   creating: data/
+  inflating: data/2011_circ.csv      
+  inflating: data/all_years.pkl      
+  inflating: data/df_long.pkl        
+  inflating: data/2016_circ.csv      
+  inflating: data/2017_circ.csv      
+  inflating: data/2022_circ.csv      
+  inflating: data/2018_circ.csv      
+  inflating: data/2019_circ.csv      
+  inflating: data/2012_circ.csv      
+  inflating: data/2013_circ.csv      
+  inflating: data/2021_circ.csv      
+  inflating: data/2020_circ.csv      
+  inflating: data/2015_circ.csv      
+  inflating: data/2014_circ.csv      
+```
+```python
+file_location = ""
+```
+Note that the commands `wget` and `unzip` are shell commands, not Python. To run shell commands in Colab, preface the command with an exclaimation point and Colab will automagically know what to do.
+
+If you have files you'd download from the internet, you can move them directly to work with in Colab with `wget`. They won't be in your Google Drive (they were copied onto the machine in the cloud running Colab, if you disconnect from Colab, the files will not persist.) 
 
 Let's load that file into a pandas DataFrame, and save it to a new variable called `df`.
 
