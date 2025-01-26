@@ -10,7 +10,41 @@ and instructions on how to obtain them are provided below.
 
 To participate in this lesson, we will use [Colab notebooks](https://colab.research.google.com/). Colab is a cloud-based environment where you can run scripting languages such as Python, create small segments of code, annotate them with notes and rich text, and return to your work later.
 
-We will need to import our own resources into Colab, such as our simulated data. To do this, one option is to use Google drive. Because we would need to grant Colab access to our Google Drive data, **we strongly recommend creating an ad-hoc ("throwaway") Gmail account.** That way, we do not risk sharing or altering any sensitive data that we might have in the Google accounts we regularly use.
+We can import our own resources into Colab, such as our simulated data. To do this, one option is to use Google drive. Because we would need to grant Colab access to our Google Drive data, **we strongly recommend creating an ad-hoc ("throwaway") Gmail account.** That way, we do not risk sharing or altering any sensitive data that we might have in the Google accounts we regularly use.
+
+For our workshop, we will download directly to the Colab machine to avoid Google Drive permission concerns.
+
+:::::::::::::::::::::::::::::::::::::::::: spoiler
+
+## Uploading lesson materials to Google Drive
+
+1. Download [this zip file][dataset] and save it to your Desktop. 
+1. Unzip the ```data.zip``` file, which should create a new folder called ```data```.
+1. In a private browsing window, log into [Google Drive](https://drive.google.com/drive/my-drive) using the Gmail account you created for this course. 
+1. Upload the lesson content by clicking "+ New" followed by "Folder upload." Select and upload the `data` folder.
+
+You should see a `data` folder in "My Drive".
+
+## Using data in Google Drive with Colab
+
+To access you had uploaded to Google Drive, we will need to import a module from the google.colab library that will let us access files in Google Drive. Run the following code to enable Drive access.
+
+```python
+from google.colab import drive
+drive.mount('/content/drive')
+```
+
+```output
+Mounted at /content/drive
+```
+
+This command sets up Colab to find data you've uploaded to Google Drive at "/content/drive/My\ Drive/" (note that in Colab "/drive/My\ Drive/" also works)
+
+
+In the workshop content, wherever you see a filename (for example, 'data/2011_circ.csv'), 
+you will want to use add the path to Google Drive to the filename (for example, "drive/MyDrive/data/2011_circ.csv")
+
+::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::::: spoiler
 
@@ -32,6 +66,9 @@ If you install Anaconda, you can launch a notebook in two ways:
 
 ## Anaconda Navigator
 
+NOTE: In 2020, Anaconda modified the Terms of Service. Free use of Anaconda for 
+educational and non-profit organizations is now narrowly scoped. Understand the 
+potential financial obligations of using Anaconda before proceeding.
 1. Launch Anaconda Navigator.
   It might ask you if you'd like to send anonymized usage information to Anaconda developers:
   ![](fig/anaconda-navigator-first-launch.png){alt='Anaconda Navigator first launch'}

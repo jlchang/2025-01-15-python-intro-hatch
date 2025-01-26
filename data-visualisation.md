@@ -20,6 +20,7 @@ exercises: 10
 
 For this module, we will use the tidy (long) version of our circulation data, where each variable forms a column, each observation forms a row, and each type of observation unit forms a row. If your workshop included the Tidy Data episode, you should be set and have an object called `df_long` in your Jupyter environment. If not, we’ll read that dataset in now, as it was provided for this lesson.
 
+Because ".pkl" files load runnable code, ONLY load Python .pkl files from sources you trust (Ideally, only files you generated). .pkl files of unknown origin have the potential to harbor malicious code. 
 
 ``` python
 #import if it is already not
@@ -78,7 +79,7 @@ That's interesting, but by default `.plot()` will use a line plot for all numeri
 
 
 ``` python
-albany['circulation'].plot()
+albany['circulation'].sort_index().plot()
 ```
 
 ![](fig/albany-circ-3.png){alt="Line plot of the Albany Park branch circulation showing a big drop from 2013 to 2014."}

@@ -22,6 +22,19 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::::::::::::::::::::::::::::::::::::::::: spoiler
+
+Data download instructions if you are in a fresh Colab session
+
+You will need to re-download the data files if you are not continuing directly from episode 7 "Looping Over Data Sets"
+
+```bash
+!wget https://github.com/jlchang/cb-python-intro-lesson-template/raw/refs/heads/main/episodes/files/data.zip
+!unzip data.zip
+```
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## Pinpoint specific rows and columns in a DataFrame
 
 If you don't already have all of the CSV files loaded into a DataFrame, let's do that now: 
