@@ -292,7 +292,7 @@ about data.</a></li>
 <div class="accordion accordion-flush" id="accordionFlush9">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading9">
-        <a href="pandas.html">8. Using Pandas</a>
+        <a href="conditionals.html">8. Conditionals</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -301,7 +301,7 @@ about data.</a></li>
 <div class="accordion accordion-flush" id="accordionFlush10">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading10">
-        <a href="conditionals.html">9. Conditionals</a>
+        <a href="writing-functions.html">9. Writing Functions</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -310,7 +310,7 @@ about data.</a></li>
 <div class="accordion accordion-flush" id="accordionFlush11">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading11">
-        <a href="writing-functions.html">10. Writing Functions</a>
+        <a href="data-visualisation.html">10. Data Visualisation</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -319,7 +319,7 @@ about data.</a></li>
 <div class="accordion accordion-flush" id="accordionFlush12">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading12">
-        <a href="tidy.html">11. Tidy Data with Pandas</a>
+        <a href="pandas.html">11. Using Pandas</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -328,7 +328,7 @@ about data.</a></li>
 <div class="accordion accordion-flush" id="accordionFlush13">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading13">
-        <a href="data-visualisation.html">12. Data Visualisation</a>
+        <a href="tidy.html">12. Tidy Data with Pandas</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -401,7 +401,7 @@ about data.</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Libraries &amp; Pandas</h1>
-        <p>Last updated on 2025-01-23 |
+        <p>Last updated on 2025-01-29 |
 
         <a href="https://github.com/jlchang/2024-10-XX-python-intro-hatch/edit/main/episodes/libraries.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -687,11 +687,6 @@ Archive:  data.zip
   inflating: data/2015_circ.csv
   inflating: data/2014_circ.csv      </code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb13">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>file_location <span class="op">=</span> <span class="st">""</span></span></code></pre>
-</div>
 <p>Note that the commands <code>wget</code> and <code>unzip</code> are
 shell commands, not Python. To run shell commands in Colab, preface the
 command with an exclaimation point and Colab will automagically know
@@ -703,11 +698,11 @@ running Colab, if you disconnect from Colab, the files will not
 persist.)</p>
 <p>Let’s load that file into a pandas DataFrame, and save it to a new
 variable called <code>df</code>.</p>
-<div class="codewrapper sourceCode" id="cb14">
+<div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'data/2011_circ.csv'</span>)</span>
-<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="bu">print</span>(df)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'data/2011_circ.csv'</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="bu">print</span>(df)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -783,11 +778,11 @@ differentiate between the datasets.</p>
 isn’t very easy to read. We can use <code>.head()</code> to look at just
 the first few rows in our dataframe formatted in a more convenient way
 for our Notebook.</p>
-<div class="codewrapper sourceCode" id="cb17">
+<div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a>df_2011 <span class="op">=</span> pd.read_csv(<span class="st">'data/2011_circ.csv'</span>)</span>
-<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a>df_2011.head()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a>df_2011 <span class="op">=</span> pd.read_csv(<span class="st">'data/2011_circ.csv'</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a>df_2011.head()</span></code></pre>
 </div>
 <table class="table"><colgroup><col width="2%"><col width="9%"><col width="14%"><col width="5%"><col width="5%"><col width="5%"><col width="5%"><col width="3%"><col width="3%"><col width="3%"><col width="3%"><col width="3%"><col width="4%"><col width="6%"><col width="5%"><col width="5%"><col width="5%"><col width="4%"></colgroup><thead><tr class="header"><th></th>
 <th>branch</th>
@@ -900,10 +895,10 @@ for our Notebook.</p>
 </tr></tbody></table></div>
 </section><section><h2 class="section-heading" id="use-the-dataframe-info-method-to-find-out-more-about-a-dataframe-">Use the <code>DataFrame.info()</code> method to find out more about
 a dataframe.<a class="anchor" aria-label="anchor" href="#use-the-dataframe-info-method-to-find-out-more-about-a-dataframe-"></a></h2>
-<hr class="half-width"><div class="codewrapper sourceCode" id="cb18">
+<hr class="half-width"><div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a>df_2011.info()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a>df_2011.info()</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -943,10 +938,10 @@ dataframe’s columns.<a class="anchor" aria-label="anchor" href="#the-dataframe
 <hr class="half-width"><p>Note that this is data, <em>not</em> a method, so do not use
 <code>()</code> to try to call it. It helpfully gives us a list of all
 of the column names.</p>
-<div class="codewrapper sourceCode" id="cb20">
+<div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="bu">print</span>(df_2011.columns)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="bu">print</span>(df_2011.columns)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -961,10 +956,10 @@ about data.<a class="anchor" aria-label="anchor" href="#use-dataframe-describe-t
 <hr class="half-width"><p><code>DataFrame.describe()</code> gets the summary statistics of only
 the columns that have numerical data. All other columns are ignored,
 unless you use the argument <code>include='all'</code>.</p>
-<div class="codewrapper sourceCode" id="cb22">
+<div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a>df_2011.describe()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a>df_2011.describe()</span></code></pre>
 </div>
 <table style="width:100%;" class="table"><colgroup><col width="3%"><col width="6%"><col width="6%"><col width="6%"><col width="6%"><col width="6%"><col width="6%"><col width="6%"><col width="6%"><col width="6%"><col width="6%"><col width="6%"><col width="6%"><col width="6%"><col width="7%"></colgroup><thead><tr class="header"><th></th>
 <th>zip code</th>
@@ -1118,12 +1113,12 @@ course of the year.</p>
 <li>Rewrite the program so that it uses <code>import</code>
 <em>without</em> <code>as</code>.</li>
 <li>Which form do you find easier to read?</li>
-</ol><div class="codewrapper sourceCode" id="cb23">
+</ol><div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="im">import</span> string <span class="im">as</span> s</span>
-<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a>numbers <span class="op">=</span> ____.digits</span>
-<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a><span class="bu">print</span>(____)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="im">import</span> string <span class="im">as</span> s</span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a>numbers <span class="op">=</span> ____.digits</span>
+<span id="cb22-3"><a href="#cb22-3" tabindex="-1"></a><span class="bu">print</span>(____)</span></code></pre>
 </div>
 </div>
 </div>
@@ -1135,20 +1130,20 @@ course of the year.</p>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb23">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="im">import</span> string <span class="im">as</span> s</span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a>numbers <span class="op">=</span> s.digits</span>
+<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a><span class="bu">print</span>(numbers)</span></code></pre>
+</div>
+<p>can be written as</p>
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="im">import</span> string <span class="im">as</span> s</span>
-<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a>numbers <span class="op">=</span> s.digits</span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="im">import</span> string</span>
+<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a>numbers <span class="op">=</span> string.digits</span>
 <span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a><span class="bu">print</span>(numbers)</span></code></pre>
-</div>
-<p>can be written as</p>
-<div class="codewrapper sourceCode" id="cb25">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="im">import</span> string</span>
-<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a>numbers <span class="op">=</span> string.digits</span>
-<span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a><span class="bu">print</span>(numbers)</span></code></pre>
 </div>
 <p>Since you just wrote the code and are familiar with it, you might
 actually find the first version easier to read. But when trying to read
@@ -1170,12 +1165,12 @@ conventions.</p>
 <p>Given the variables <code>year</code>, <code>month</code> and
 <code>day</code>, how would you generate a date in the standard iso
 format:</p>
-<div class="codewrapper sourceCode" id="cb26">
+<div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a>year <span class="op">=</span> <span class="dv">1971</span></span>
-<span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a>month <span class="op">=</span> <span class="dv">8</span></span>
-<span id="cb26-3"><a href="#cb26-3" tabindex="-1"></a>day <span class="op">=</span> <span class="dv">26</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a>year <span class="op">=</span> <span class="dv">1971</span></span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a>month <span class="op">=</span> <span class="dv">8</span></span>
+<span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a>day <span class="op">=</span> <span class="dv">26</span></span></code></pre>
 </div>
 <ol style="list-style-type: decimal"><li>Which <a href="https://docs.python.org/3/library/" class="external-link">standard
 library</a> module could help you?</li>
@@ -1195,21 +1190,21 @@ library</a> module could help you?</li>
 module</a> seems like it could help you.</p>
 <p>You could use <code>date(year, month, date).isoformat()</code> to
 convert your date:</p>
+<div class="codewrapper sourceCode" id="cb26">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="im">import</span> datetime</span>
+<span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" tabindex="-1"></a>iso_date <span class="op">=</span> datetime.date(year, month, day).isoformat()</span>
+<span id="cb26-4"><a href="#cb26-4" tabindex="-1"></a><span class="bu">print</span>(iso_date)</span></code></pre>
+</div>
+<p>or more compactly:</p>
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="im">import</span> datetime</span>
 <span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a></span>
-<span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a>iso_date <span class="op">=</span> datetime.date(year, month, day).isoformat()</span>
-<span id="cb27-4"><a href="#cb27-4" tabindex="-1"></a><span class="bu">print</span>(iso_date)</span></code></pre>
-</div>
-<p>or more compactly:</p>
-<div class="codewrapper sourceCode" id="cb28">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="im">import</span> datetime</span>
-<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a></span>
-<span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a><span class="bu">print</span>(datetime.date(year, month, day).isoformat())</span></code></pre>
+<span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a><span class="bu">print</span>(datetime.date(year, month, day).isoformat())</span></code></pre>
 </div>
 </div>
 </div>
@@ -1314,8 +1309,8 @@ any links that you are not going to use.
   "url": "https://jlchang.github.io/2024-10-XX-python-intro-hatch/instructor/libraries.html",
   "identifier": "https://jlchang.github.io/2024-10-XX-python-intro-hatch/instructor/libraries.html",
   "dateCreated": "2024-09-01",
-  "dateModified": "2025-01-23",
-  "datePublished": "2025-01-28"
+  "dateModified": "2025-01-29",
+  "datePublished": "2025-01-29"
 }
 
   </script><script>

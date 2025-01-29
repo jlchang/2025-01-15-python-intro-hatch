@@ -273,7 +273,7 @@
 <div class="accordion accordion-flush" id="accordionFlush9">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading9">
-        <a href="pandas.html">8. Using Pandas</a>
+        <a href="conditionals.html">8. Conditionals</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -282,7 +282,7 @@
 <div class="accordion accordion-flush" id="accordionFlush10">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading10">
-        <a href="conditionals.html">9. Conditionals</a>
+        <a href="writing-functions.html">9. Writing Functions</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -291,7 +291,7 @@
 <div class="accordion accordion-flush" id="accordionFlush11">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading11">
-        <a href="writing-functions.html">10. Writing Functions</a>
+        <a href="data-visualisation.html">10. Data Visualisation</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -300,7 +300,7 @@
 <div class="accordion accordion-flush" id="accordionFlush12">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading12">
-        <a href="tidy.html">11. Tidy Data with Pandas</a>
+        <a href="pandas.html">11. Using Pandas</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -309,7 +309,7 @@
 <div class="accordion accordion-flush" id="accordionFlush13">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading13">
-        <a href="data-visualisation.html">12. Data Visualisation</a>
+        <a href="tidy.html">12. Tidy Data with Pandas</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -412,22 +412,69 @@ instructions on how to obtain them are provided below.</p>
 a cloud-based environment where you can run scripting languages such as
 Python, create small segments of code, annotate them with notes and rich
 text, and return to your work later.</p>
-<p>We will need to import our own resources into Colab, such as our
-simulated data. To do this, one option is to use Google drive. Because
-we would need to grant Colab access to our Google Drive data, <strong>we
-strongly recommend creating an ad-hoc (“throwaway”) Gmail
-account.</strong> That way, we do not risk sharing or altering any
-sensitive data that we might have in the Google accounts we regularly
-use.</p>
-<div id="accordionSpoiler7" class="accordion spoiler-accordion accordion-flush">
+<p>We can import our own resources into Colab, such as our simulated
+data. To do this, one option is to use Google drive. Because we would
+need to grant Colab access to our Google Drive data, <strong>we strongly
+recommend creating an ad-hoc (“throwaway”) Gmail account.</strong> That
+way, we do not risk sharing or altering any sensitive data that we might
+have in the Google accounts we regularly use.</p>
+<p>For our workshop, we will download directly to the Colab machine to
+avoid Google Drive permission concerns.</p>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler7" aria-expanded="false" aria-controls="collapseSpoiler7">
-  <h3 class="accordion-header" id="headingSpoiler7">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Uploading lesson materials to Google Drive
+  </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
+<ol style="list-style-type: decimal"><li>Download <a href="files/data.zip">this zip file</a> and save it to
+your Desktop.</li>
+<li>Unzip the <code>data.zip</code> file, which should create a new
+folder called <code>data</code>.</li>
+<li>In a private browsing window, log into <a href="https://drive.google.com/drive/my-drive" class="external-link">Google Drive</a> using
+the Gmail account you created for this course.</li>
+<li>Upload the lesson content by clicking “+ New” followed by “Folder
+upload.” Select and upload the <code>data</code> folder.</li>
+</ol><p>You should see a <code>data</code> folder in “My Drive”.</p>
+<div class="section level2">
+<h2 id="using-data-in-google-drive-with-colab">Using data in Google Drive with Colab<a class="anchor" aria-label="anchor" href="#using-data-in-google-drive-with-colab"></a></h2>
+<p>To access you had uploaded to Google Drive, we will need to import a
+module from the google.colab library that will let us access files in
+Google Drive. Run the following code to enable Drive access.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>drive.mount(<span class="st">'/content/drive'</span>)</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Mounted at /content/drive</code></pre>
+</div>
+<p>This command sets up Colab to find data you’ve uploaded to Google
+Drive at “/content/drive/My Drive/” (note that in Colab
+“/drive/My Drive/” also works)</p>
+<p>In the workshop content, wherever you see a filename (for example,
+‘data/2011_circ.csv’), you will want to use add the path to Google Drive
+to the filename (for example, “drive/MyDrive/data/2011_circ.csv”)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler8" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler8" aria-expanded="false" aria-controls="collapseSpoiler8">
+  <h3 class="accordion-header" id="headingSpoiler8">
   <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
   Further reading: colab alternatives
   </h3>
 </button>
-<div id="collapseSpoiler7" class="accordion-collapse collapse" aria-labelledby="headingSpoiler7" data-bs-parent="#accordionSpoiler7">
+<div id="collapseSpoiler8" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler8" aria-labelledby="headingSpoiler8">
 <div class="accordion-body">
 <p>We chose Google colab to ensure Python setup and everyone’s Jupyter
 interface would be consistent. For your personal use, you may prefer not
@@ -447,73 +494,76 @@ which you prefer.</p>
 <p>A Jupyter Notebook provides a browser-based interface for working
 with Python. Colab is one example of this. If you install Anaconda, you
 can launch a notebook in two ways:</p>
-<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
-  <h3 class="accordion-header" id="headingSpoiler1">
-  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
-  Anaconda Navigator
-  </h3>
-</button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
-<div class="accordion-body">
-<ol style="list-style-type: decimal"><li>Launch Anaconda Navigator. It might ask you if you’d like to send
-anonymized usage information to Anaconda developers: <img src="fig/anaconda-navigator-first-launch.png" alt="Anaconda Navigator first launch" class="figure"> Make your choice and click “Ok,
-and don’t show again” button.</li>
-<li>Find the “Notebook” tab and click on the “Launch” button: <img src="fig/anaconda-navigator-notebook-launch.png" alt="Anaconda Navigator Notebook launch" class="figure"> Anaconda will open a new
-browser window or tab with a Notebook Dashboard showing you the contents
-of your Home (or User) folder.</li>
-<li>Navigate to the <code>data</code> directory by clicking on the
-directory names leading to it: <code>Desktop</code>,
-<code>swc-python</code>, then <code>data</code>: <img src="fig/jupyter-notebook-data-directory.png" alt="Anaconda Navigator Notebook directory" class="figure"></li>
-<li>Launch the notebook by clicking on the “New” button and then
-selecting “Python 3”: <img src="fig/jupyter-notebook-launch-notebook.png" alt="Anaconda Navigator Notebook directory" class="figure"></li>
-</ol></div>
-</div>
-</div>
-</div>
-<div id="accordionSpoiler6" class="accordion spoiler-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler6" aria-expanded="false" aria-controls="collapseSpoiler6">
-  <h3 class="accordion-header" id="headingSpoiler6">
-  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
-  Command line (Terminal)
-  </h3>
-</button>
-<div id="collapseSpoiler6" class="accordion-collapse collapse" aria-labelledby="headingSpoiler6" data-bs-parent="#accordionSpoiler6">
-<div class="accordion-body">
-<p>1. Navigate to the <code>data</code> directory:</p>
 <div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">
   <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
-  Unix shell
+  Anaconda Navigator
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
-<p>If you’re using a Unix shell application, such as Terminal app in
-macOS, Console or Terminal in Linux, or <a href="https://gitforwindows.org" class="external-link">Git Bash</a> on Windows, execute the
-following command:</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">cd</span> ~/Desktop/swc-python/data</span></code></pre>
+<p>NOTE: In 2020, Anaconda modified the Terms of Service. Free use of
+Anaconda for educational and non-profit organizations is now narrowly
+scoped. Understand the potential financial obligations of using Anaconda
+before proceeding. 1. Launch Anaconda Navigator. It might ask you if
+you’d like to send anonymized usage information to Anaconda developers:
+<img src="fig/anaconda-navigator-first-launch.png" alt="Anaconda Navigator first launch" class="figure"> Make your choice and click “Ok,
+and don’t show again” button. 2. Find the “Notebook” tab and click on
+the “Launch” button: <img src="fig/anaconda-navigator-notebook-launch.png" alt="Anaconda Navigator Notebook launch" class="figure"> Anaconda will open a new
+browser window or tab with a Notebook Dashboard showing you the contents
+of your Home (or User) folder. 3. Navigate to the <code>data</code>
+directory by clicking on the directory names leading to it:
+<code>Desktop</code>, <code>swc-python</code>, then <code>data</code>:
+<img src="fig/jupyter-notebook-data-directory.png" alt="Anaconda Navigator Notebook directory" class="figure"> 4. Launch the notebook by
+clicking on the “New” button and then selecting “Python 3”: <img src="fig/jupyter-notebook-launch-notebook.png" alt="Anaconda Navigator Notebook directory" class="figure"></p>
 </div>
 </div>
 </div>
 </div>
-</div>
+<div id="accordionSpoiler7" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler7" aria-expanded="false" aria-controls="collapseSpoiler7">
+  <h3 class="accordion-header" id="headingSpoiler7">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Command line (Terminal)
+  </h3>
+</button>
+<div id="collapseSpoiler7" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler7" aria-labelledby="headingSpoiler7">
+<div class="accordion-body">
+<p>1. Navigate to the <code>data</code> directory:</p>
 <div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
   <h3 class="accordion-header" id="headingSpoiler3">
   <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Unix shell
+  </h3>
+</button>
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div class="accordion-body">
+<p>If you’re using a Unix shell application, such as Terminal app in
+macOS, Console or Terminal in Linux, or <a href="https://gitforwindows.org" class="external-link">Git Bash</a> on Windows, execute the
+following command:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">cd</span> ~/Desktop/swc-python/data</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler4" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler4" aria-expanded="false" aria-controls="collapseSpoiler4">
+  <h3 class="accordion-header" id="headingSpoiler4">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
   Command Prompt (Windows)
   </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
 <div class="accordion-body">
 <p>On Windows, you can use its native Command Prompt program. The
 easiest way to start it up is pressing <kbd>Windows Logo
@@ -526,34 +576,34 @@ navigate to the <code>data</code> folder:</p>
 </div>
 </div>
 <p>2. Start Jupyter server</p>
-<div id="accordionSpoiler4" class="accordion spoiler-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler4" aria-expanded="false" aria-controls="collapseSpoiler4">
-  <h3 class="accordion-header" id="headingSpoiler4">
-  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
-  Unix shell
-  </h3>
-</button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
-<div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb3">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">jupyter</span> notebook</span></code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div id="accordionSpoiler5" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler5" aria-expanded="false" aria-controls="collapseSpoiler5">
   <h3 class="accordion-header" id="headingSpoiler5">
   <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Unix shell
+  </h3>
+</button>
+<div id="collapseSpoiler5" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler5" aria-labelledby="headingSpoiler5">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">jupyter</span> notebook</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler6" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler6" aria-expanded="false" aria-controls="collapseSpoiler6">
+  <h3 class="accordion-header" id="headingSpoiler6">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
   Command Prompt (Windows)
   </h3>
 </button>
-<div id="collapseSpoiler5" class="accordion-collapse collapse" aria-labelledby="headingSpoiler5" data-bs-parent="#accordionSpoiler5">
+<div id="collapseSpoiler6" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler6" aria-labelledby="headingSpoiler6">
 <div class="accordion-body">
 <pre class="source"><code>python -m notebook</code></pre>
 </div>
@@ -648,8 +698,8 @@ any links that you are not going to use.
   "url": "https://jlchang.github.io/2024-10-XX-python-intro-hatch/index.html",
   "identifier": "https://jlchang.github.io/2024-10-XX-python-intro-hatch/index.html",
   "dateCreated": "2024-09-01",
-  "dateModified": "2025-01-28",
-  "datePublished": "2025-01-28"
+  "dateModified": "2025-01-29",
+  "datePublished": "2025-01-29"
 }
 
   </script><script>
