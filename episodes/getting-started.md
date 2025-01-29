@@ -36,7 +36,7 @@ If you've created a gmail account to access colab account, please put the <span 
 
 
 
-Feel free to browse today's [lesson content](jlchang.github.io/2025-01-15-python-intro-hatch) [(tinyurl.com/wplpythonJan15)](tinyurl.com/wplpythonJan15)
+Feel free to browse today's [lesson content] [(tinyurl.com/wplpythonJan15)]
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -190,7 +190,8 @@ You can add text to a Juypter notebook by selecting a cell, and changing the cel
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-
+[lesson content]: https://jlchang.github.io/2025-01-15-python-intro-hatch 
+[(tinyurl.com/wplpythonJan15)]: https://tinyurl.com/wplpythonJan15
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - You can run a cloud based Jupyter Notebook with a Google account and a web browser.

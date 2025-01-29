@@ -201,9 +201,7 @@ Archive:  data.zip
   inflating: data/2015_circ.csv      
   inflating: data/2014_circ.csv      
 ```
-```python
-file_location = ""
-```
+
 Note that the commands `wget` and `unzip` are shell commands, not Python. To run shell commands in Colab, preface the command with an exclaimation point and Colab will automagically know what to do.
 
 If you have files you'd download from the internet, you can move them directly to work with in Colab with `wget`. They won't be in your Google Drive (they were copied onto the machine in the cloud running Colab, if you disconnect from Colab, the files will not persist.) 
