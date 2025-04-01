@@ -19,7 +19,7 @@
   "Packages": {
     "renv": {
       "Package": "renv",
-      "Version": "1.0.7",
+      "Version": "1.1.4",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Project Environments",
@@ -34,13 +34,16 @@
       "Suggests": [
         "BiocManager",
         "cli",
+        "compiler",
         "covr",
         "cpp11",
         "devtools",
         "gitcreds",
         "jsonlite",
+        "jsonvalidate",
         "knitr",
         "miniUI",
+        "modules",
         "packrat",
         "pak",
         "R6",
@@ -56,7 +59,7 @@
         "webfakes"
       ],
       "Encoding": "UTF-8",
-      "RoxygenNote": "7.3.1",
+      "RoxygenNote": "7.3.2",
       "VignetteBuilder": "knitr",
       "Config/Needs/website": "tidyverse/tidytemplate",
       "Config/testthat/edition": "3",
